@@ -1,0 +1,7 @@
+index.src.html
+assets/
+README.md
+build.py
+.claude/
+*.pdf
+propuesta-pdf*.html
