@@ -104,9 +104,9 @@ b{font-weight:700}
 .nota .i{flex:none;width:1.5em;height:1.5em;border-radius:50%;background:var(--nar);color:#fff;font-weight:800;display:grid;place-items:center;font-size:.85em;font-family:'Montserrat'}
 
 /* ===== TELÉFONOS (formatos) ===== */
-.phones{display:grid;grid-template-columns:repeat(3,auto);justify-content:center;gap:clamp(18px,4vw,80px);flex:1;align-items:center;min-height:0}
+.phones{display:grid;grid-template-columns:repeat(3,auto);justify-content:center;align-content:center;gap:clamp(18px,4vw,80px);flex:1;align-items:start;min-height:0;padding-top:clamp(14px,3.5vh,40px)}
 .pf{display:flex;flex-direction:column;align-items:center;gap:clamp(10px,1.8vh,20px);text-align:center}
-.phone{height:min(52vh,500px);aspect-ratio:9/18.5;border-radius:clamp(22px,2.4vw,36px);background:#0B0B0A;padding:clamp(5px,.5vw,8px);
+.phone{height:min(47vh,470px);aspect-ratio:9/18.5;border-radius:clamp(22px,2.4vw,36px);background:#0B0B0A;padding:clamp(5px,.5vw,8px);
        box-shadow:0 30px 60px rgba(0,0,0,.45),inset 0 0 0 1.5px #3a3a38;position:relative}
 .scr{position:relative;width:100%;height:100%;border-radius:clamp(17px,1.9vw,29px);overflow:hidden;background:#222}
 .scr>img{width:100%;height:100%;object-fit:cover;display:block}
@@ -195,6 +195,8 @@ b{font-weight:700}
 .pl .lv i.on{background:var(--nar)}
 .pl .pr{font-family:'Montserrat';font-weight:900;font-size:clamp(32px,4vw,68px);letter-spacing:-.04em;line-height:1;margin:.35em 0 .1em}
 .pl .pr small{font-size:.32em;font-weight:700;letter-spacing:0;color:var(--gris);margin-left:.3em}
+.pl .per{align-self:flex-start;font-family:'Montserrat';font-weight:700;font-size:clamp(11.5px,.95vw,15px);background:var(--tint);color:var(--nar2);
+        padding:.35em .85em;border-radius:999px;margin-top:.5em}
 .pl dl{margin-top:clamp(10px,2vh,22px);display:flex;flex-direction:column}
 .pl dt{font-family:'Montserrat';font-size:clamp(11px,.9vw,14px);font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--nar2);
        padding-top:clamp(9px,1.5vh,15px);border-top:1px solid #EEE9E1;margin-top:clamp(9px,1.5vh,15px)}
@@ -372,18 +374,18 @@ b{font-weight:700}
   <div class="plans">
     <div class="pl r d3">
       <div class="nm"><b>Base</b><span class="lv"><i class="on"></i><i></i><i></i></span></div>
-      <div class="pr">$30,000<small>MXN + IVA</small></div>
-      <dl><dt>Creadores</dt><dd><b>1–2</b> micro</dd><dt>Formato</dt><dd>Publicidad dentro de su contenido</dd><dt>Duración</dt><dd><b>3 meses</b></dd></dl>
+      <div class="pr">$30,000<small>/ mes + IVA</small></div><span class="per">Plan de 3 meses</span>
+      <dl><dt>Creadores</dt><dd><b>1–2</b> micro</dd><dt>Formato</dt><dd>Publicidad dentro de su contenido</dd></dl>
     </div>
     <div class="pl r d4">
       <div class="nm"><b>Plus</b><span class="lv"><i class="on"></i><i class="on"></i><i></i></span></div>
-      <div class="pr">$45,000<small>MXN + IVA</small></div>
-      <dl><dt>Creadores</dt><dd><b>2–3</b> micro</dd><dt>Formato</dt><dd>Reels o menciones directas</dd><dt>Duración</dt><dd><b>3 meses</b></dd></dl>
+      <div class="pr">$45,000<small>/ mes + IVA</small></div><span class="per">Plan de 3 meses</span>
+      <dl><dt>Creadores</dt><dd><b>2–3</b> micro</dd><dt>Formato</dt><dd>Reels o menciones directas</dd></dl>
     </div>
     <div class="pl r d5">
       <div class="nm"><b>Pro</b><span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
-      <div class="pr">$60,000<small>MXN + IVA</small></div>
-      <dl><dt>Creadores</dt><dd><b>3–4</b> micro y nivel medio</dd><dt>Formato</dt><dd>Reels, menciones e historias</dd><dt>Duración</dt><dd><b>3 meses</b></dd></dl>
+      <div class="pr">$60,000<small>/ mes + IVA</small></div><span class="per">Plan de 3 meses</span>
+      <dl><dt>Creadores</dt><dd><b>3–4</b> micro y nivel medio</dd><dt>Formato</dt><dd>Reels, menciones e historias</dd></dl>
     </div>
   </div>
   <div class="incl foot r d6"><span class="mini" style="opacity:.8;margin-right:6px"><b>Todos incluyen:</b></span><span class="chip">Búsqueda de creadores</span><span class="chip">Negociación y contratos</span><span class="chip">Producción</span><span class="chip">Reporte</span></div>
@@ -459,6 +461,13 @@ b{font-weight:700}
     if(Math.abs(dx)>48&&Math.abs(dx)>Math.abs(dy)){ dx<0?go(i+1):go(i-1) }
     x0=null;
   },{passive:true});
+  if(/[?&]static/.test(location.search)){
+    var st=document.createElement('style');
+    st.textContent='.r{opacity:1!important;transform:none!important;animation:none!important}.mk{background-size:100% 86%!important;animation:none!important}'
+      +'.s.foto .bg{transform:none!important;transition:none!important}.s{transition:none!important}.flo,.ban,.tag,.play{animation:none!important}'
+      +'.scr .bar b{animation:none!important;transform:scaleX(.45)!important}#ctl,#hint,#prog,.arrow{display:none!important}';
+    document.head.appendChild(st);
+  }
   var h0=parseInt((location.hash||'').slice(1),10);
   go(h0>0&&h0<=slides.length?h0-1:0);
   setTimeout(function(){hint.classList.add('gone')},5000);

@@ -5,3 +5,4 @@ build.py
 .claude/
 *.pdf
 propuesta-pdf*.html
+build-pdf.py
