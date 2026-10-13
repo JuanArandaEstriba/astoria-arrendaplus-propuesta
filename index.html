@@ -193,10 +193,14 @@ b{font-weight:700}
 .pl .lv{display:flex;gap:4px}
 .pl .lv i{width:clamp(16px,1.4vw,24px);height:6px;border-radius:3px;background:#E6E1D9}
 .pl .lv i.on{background:var(--nar)}
-.pl .pr{font-family:'Montserrat';font-weight:900;font-size:clamp(32px,4vw,68px);letter-spacing:-.04em;line-height:1;margin:.35em 0 .1em}
+.pl .pr{font-family:'Montserrat';font-weight:900;font-size:clamp(30px,3.3vw,58px);letter-spacing:-.04em;line-height:1;margin:.2em 0 0}
 .pl .pr small{font-size:.32em;font-weight:700;letter-spacing:0;color:var(--gris);margin-left:.3em}
 .pl .per{align-self:flex-start;font-family:'Montserrat';font-weight:700;font-size:clamp(11.5px,.95vw,15px);background:var(--tint);color:var(--nar2);
         padding:.35em .85em;border-radius:999px;margin-top:.5em}
+.pl .tl{font-family:'Montserrat';font-weight:800;font-size:clamp(10.5px,.82vw,13px);letter-spacing:.14em;text-transform:uppercase;color:var(--gris);margin-top:clamp(12px,2.2vh,22px)}
+.pl .desg{display:grid;grid-template-columns:1fr auto;gap:.35em 1em;background:var(--tint);border-radius:12px;padding:.75em 1em;margin-top:.7em;
+          font-size:clamp(13px,1.1vw,17.5px)}
+.pl .desg span{opacity:.75}.pl .desg b{font-family:'Montserrat';font-weight:800;text-align:right}
 .pl dl{margin-top:clamp(10px,2vh,22px);display:flex;flex-direction:column}
 .pl dt{font-family:'Montserrat';font-size:clamp(11px,.9vw,14px);font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--nar2);
        padding-top:clamp(9px,1.5vh,15px);border-top:1px solid #EEE9E1;margin-top:clamp(9px,1.5vh,15px)}
@@ -241,6 +245,13 @@ b{font-weight:700}
   .pl dd{font-size:14px;margin:0}
   .pl dd:not(:last-child)::after{content:" ·";opacity:.4}
   .incl .chip{font-size:12px}
+  .pl{padding:14px 16px;border-radius:16px}
+  .pl .nm b{font-size:19px}
+  .pl .tl{margin-top:6px;font-size:10px}
+  .pl .pr{font-size:27px}
+  .pl .desg{gap:1px 10px;padding:6px 10px;margin-top:6px;font-size:12.5px}
+  .pl dl{margin-top:6px}
+  .incl{display:none}
   .hide-m{display:none!important}
   #hint{display:none}
   .niches{grid-template-columns:1fr 1fr;grid-auto-rows:150px;flex:none}
@@ -371,20 +382,21 @@ b{font-weight:700}
 <section class="s">
   <span class="eb r d1">La propuesta · todo incluido</span>
   <h2 class="h md r d2" style="margin-top:.3em">Tres planes, <span class="mk">tres meses.</span></h2>
+  <p class="lede r d3" style="margin-top:clamp(8px,1.6vh,16px);max-width:none;opacity:.8">Cada plan suma un <b>costo fijo</b> y un <b>costo variable</b> según el alcance.</p>
   <div class="plans">
     <div class="pl r d3">
       <div class="nm"><b>Base</b><span class="lv"><i class="on"></i><i></i><i></i></span></div>
-      <div class="pr">$30,000<small>/ mes + IVA</small></div><span class="per">Plan de 3 meses</span>
+      <span class="tl">Total por 3 meses + IVA</span><div class="pr">$1,090,000</div><div class="desg"><span>Costo fijo</span><b>$1,000,000</b><span>Costo variable</span><b>$90,000</b></div>
       <dl><dt>Creadores</dt><dd><b>1–2</b> micro</dd><dt>Formato</dt><dd>Publicidad dentro de su contenido</dd></dl>
     </div>
     <div class="pl r d4">
       <div class="nm"><b>Plus</b><span class="lv"><i class="on"></i><i class="on"></i><i></i></span></div>
-      <div class="pr">$45,000<small>/ mes + IVA</small></div><span class="per">Plan de 3 meses</span>
+      <span class="tl">Total por 3 meses + IVA</span><div class="pr">$1,135,000</div><div class="desg"><span>Costo fijo</span><b>$1,000,000</b><span>Costo variable</span><b>$135,000</b></div>
       <dl><dt>Creadores</dt><dd><b>2–3</b> micro</dd><dt>Formato</dt><dd>Reels o menciones directas</dd></dl>
     </div>
     <div class="pl r d5">
       <div class="nm"><b>Pro</b><span class="lv"><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
-      <div class="pr">$60,000<small>/ mes + IVA</small></div><span class="per">Plan de 3 meses</span>
+      <span class="tl">Total por 3 meses + IVA</span><div class="pr">$1,180,000</div><div class="desg"><span>Costo fijo</span><b>$1,000,000</b><span>Costo variable</span><b>$180,000</b></div>
       <dl><dt>Creadores</dt><dd><b>3–4</b> micro y nivel medio</dd><dt>Formato</dt><dd>Reels, menciones e historias</dd></dl>
     </div>
   </div>
